@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl pt-8 pb-16 px-12">
+    <div className="mx-auto max-w-4xl pt-8 pb-16 px-5">
       <header>
         <Link
           href="/"
@@ -36,6 +36,7 @@ export default function Home() {
               <a
                 className="hover:text-gray-600"
                 href="https://twitter.com/hewonjeong"
+                target="_blank"
               >
                 @hewonjeong
               </a>
@@ -45,7 +46,7 @@ export default function Home() {
           </header>
 
           <div className="mt-24">
-            <ul className="grid gap-x-8 gap-y-16 grid-cols-3">
+            <ul className="grid gap-x-8 gap-y-16 grid-cols-2 md:grid-cols-3">
               {books.map((book) => (
                 <Card key={book.url} {...book} />
               ))}
@@ -70,9 +71,16 @@ function Card({
 }) {
   return (
     <li className="flex flex-col justify-end">
-      <a href={url} target="_blank" rel="noreferrer" className="block">
-        <Image src={image} alt="" width={180} height={180} />
-        <h3 className="mt-4">{title}</h3>
+      <a href={url} target="_blank" rel="noreferrer" className="block group">
+        <Image
+          src={image}
+          alt=""
+          width={180}
+          height={180}
+          className="shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
+        />
+
+        <h3 className="mt-4 group-hover:underline">{title}</h3>
         <small className="text-gray-400">{authors.join(', ')}</small>
       </a>
     </li>
