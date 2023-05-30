@@ -77,7 +77,7 @@ function Card({
           alt=""
           width={180}
           height={180}
-          className="shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
+          className="rounded shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
         />
 
         <h3 className="mt-4 group-hover:underline">{title}</h3>
