@@ -8,6 +8,11 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
+export const metadata = {
+  title: 'Seójae | Hewon Jeong’s Reading List',
+  description: 'Hewon Jeong’s Reading List',
+}
+
 export default function Home() {
   return (
     <div className="mx-auto max-w-4xl pt-8 pb-16 px-12">
@@ -40,7 +45,7 @@ export default function Home() {
           </header>
 
           <div className="mt-24">
-            <ul className="grid gap-2 grid-cols-3">
+            <ul className="grid gap-x-8 gap-y-16 grid-cols-3">
               {books.map((book) => (
                 <Card key={book.url} {...book} />
               ))}
@@ -64,11 +69,11 @@ function Card({
   image: string
 }) {
   return (
-    <li>
+    <li className="flex flex-col justify-end">
       <a href={url} target="_blank" rel="noreferrer" className="block">
         <Image src={image} alt="" width={180} height={180} />
-        <h3>{title}</h3>
-        <small>{authors.join(', ')}</small>
+        <h3 className="mt-4">{title}</h3>
+        <small className="text-gray-400">{authors.join(', ')}</small>
       </a>
     </li>
   )
