@@ -19,7 +19,7 @@ export default function Home() {
       <header>
         <Link
           href="/"
-          className={`${montserrat.variable} font-montserrat text-[2rem] font-black`}
+          className={`${montserrat.variable} font-montserrat text-2xl font-black`}
         >
           Seójae
         </Link>
@@ -28,7 +28,7 @@ export default function Home() {
         <article>
           <header>
             <h1
-              className={`${montserrat.variable} font-montserrat text-[2rem] font-bold`}
+              className={`${montserrat.variable} font-montserrat text-[2.5rem] font-black`}
             >
               My Reading List
             </h1>
