@@ -28,7 +28,7 @@ export default function Home() {
         <article>
           <header>
             <h1
-              className={`${montserrat.variable} font-montserrat text-[2.5rem] font-black`}
+              className={`${montserrat.variable} font-montserrat text-[2.5rem] font-black leading-tight`}
             >
               My Reading List
             </h1>
@@ -46,7 +46,7 @@ export default function Home() {
           </header>
 
           <div className="mt-24">
-            <ul className="grid gap-x-8 gap-y-16 grid-cols-2 md:grid-cols-3">
+            <ul className="grid gap-x-4 gap-y-12 grid-cols-2 md:grid-cols-3">
               {books.map((book) => (
                 <Card key={book.url} {...book} />
               ))}
@@ -80,8 +80,8 @@ function Card({
           className="rounded shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
         />
 
-        <h3 className="mt-4 group-hover:underline">{title}</h3>
-        <small className="text-gray-400">{authors.join(', ')}</small>
+        <h3 className="mt-4 group-hover:underline truncate">{title}</h3>
+        <small className="text-gray-400 truncate">{authors.join(', ')}</small>
       </a>
     </li>
   )

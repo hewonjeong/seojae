@@ -6,7 +6,7 @@ const books = [
     image: '/67350256.jpeg',
   },
   {
-    title: '지적 대화를 위한 넓은 지식1',
+    title: '지적 대화를 위한 넓고 얕은 지식 1',
     authors: ['채사장'],
     url: 'http://www.yes24.com/Product/Goods/86545658',
     image: '/86545658.jpeg',
