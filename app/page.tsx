@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import books from './books'
 import { Montserrat } from 'next/font/google'
 import Link from 'next/link'
@@ -46,9 +46,9 @@ export default function Home() {
           </header>
 
           <div className="mt-24">
-            <ul className="grid gap-x-4 gap-y-12 grid-cols-2 md:grid-cols-3">
-              {books.map((book) => (
-                <Card key={book.url} {...book} />
+            <ul className="grid gap-x-5 gap-y-12 grid-cols-2 md:grid-cols-3">
+              {books.map((book, i) => (
+                <Card key={book.url} {...book} priority={i < 6} />
               ))}
             </ul>
           </div>
@@ -63,11 +63,13 @@ function Card({
   authors,
   url,
   image,
+  priority,
 }: {
   title: string
   authors: string[]
   url: string
-  image: string
+  image: StaticImageData | string
+  priority: boolean
 }) {
   return (
     <li className="flex flex-col justify-end">
@@ -75,11 +77,9 @@ function Card({
         <Image
           src={image}
           alt=""
-          width={180}
-          height={180}
-          className="rounded shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
+          priority={priority}
+          className="w-full max-w-[11.25rem] h-auto rounded shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
         />
-
         <h3 className="mt-4 group-hover:underline truncate">{title}</h3>
         <small className="text-gray-400 truncate">{authors.join(', ')}</small>
       </a>
