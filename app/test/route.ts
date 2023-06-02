@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
-  const body = await request.json()
+  const body = await request.text()
   const headers: any = {}
   request.headers.forEach((v, k) => {
     headers[k] = v
