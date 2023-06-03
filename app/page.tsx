@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image'
 import books from './books'
 import { Montserrat } from 'next/font/google'
 import Link from 'next/link'
+import Book from './Book'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -74,13 +75,10 @@ function Card({
   return (
     <li className="flex flex-col justify-end">
       <a href={url} target="_blank" rel="noreferrer" className="block group">
-        <Image
-          src={image}
-          alt=""
-          priority={priority}
-          className="w-full max-w-[11.25rem] h-auto rounded shadow-[0px_13px_17px_-6px_rgba(0,0,0,0.5)]"
-        />
-        <h3 className="mt-4 group-hover:underline truncate">{title}</h3>
+        <Book src={image} priority={priority} alt="" />
+        <h3 className="mt-4 group-hover:underline truncate leading-tight">
+          {title}
+        </h3>
         <small className="text-gray-400 truncate">{authors.join(', ')}</small>
       </a>
     </li>
