@@ -1,17 +1,17 @@
-import { HTMLProps } from 'react'
+import { HTMLProps, SVGProps } from 'react'
 
 type Props = {
   size?: number
-} & HTMLProps<SVGSVGElement>
+} & SVGProps<SVGSVGElement>
 
-function SVG(props: Props) {
+function SVG({ size = 32, ...props }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
+      viewBox="48 48 416 416"
       fill="currentColor"
-      width={props.size}
-      height={props.size}
+      width={size}
+      height={size}
       {...props}
     ></svg>
   )

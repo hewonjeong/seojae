@@ -23,8 +23,8 @@ export default function Form() {
       onSubmit={(e) => e.preventDefault()}
     >
       <div className="grid grid-cols-[auto_1fr_auto] bg-gray-200 h-12">
-        <div className="flex items-center p-2">
-          <Search className="w-5 h-5 text-gray-600" />
+        <div className="flex items-center p-4">
+          <Search size={16} className="text-gray-600" />
         </div>
         <div>
           <input
@@ -38,8 +38,8 @@ export default function Form() {
           />
         </div>
         {query && (
-          <button className="p-2" onClick={() => setQuery('')}>
-            <Close className="w-5 h-5 text-gray-600" />
+          <button className="p-4" onClick={() => setQuery('')}>
+            <Close size={16} className="text-gray-600" />
           </button>
         )}
       </div>
