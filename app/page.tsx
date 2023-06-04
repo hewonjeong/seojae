@@ -1,8 +1,8 @@
-import Image, { StaticImageData } from 'next/image'
-import books from './books'
 import { Montserrat } from 'next/font/google'
+import { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import Book from './Book'
+import books from './books'
 
 const montserrat = Montserrat({
   subsets: ['latin'],

@@ -5,24 +5,12 @@ import { NextResponse } from 'next/server'
 const API_URL = 'https://openapi.naver.com/v1/search/book.json'
 const DISPLAY = 10
 
-type Item = {
-  title: string
-  link: string
-  image: string
-  author: string
-  discount: string
-  publisher: string
-  pubdate: string
-  isbn: string
-  description: string
-}
-
 type Response = {
   lastBuildDate: string
   total: number
   start: number
   display: number
-  items: Item[]
+  items: Book[]
 }
 
 export async function GET(request: Request) {
@@ -45,5 +33,5 @@ export async function GET(request: Request) {
     .insert(response.items)
     .then(() => {}) // Without this block, insert will not work
 
-  return NextResponse.json({ books: response })
+  return NextResponse.json(response)
 }

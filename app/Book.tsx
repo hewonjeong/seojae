@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { ComponentProps, useState } from 'react'
+import { ComponentProps } from 'react'
 
 export default function Book({
   alt = '',
