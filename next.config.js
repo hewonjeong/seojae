@@ -2,10 +2,8 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'shopping-phinf.pstatic.net',
-      },
+      { protocol: 'https', hostname: 'shopping-phinf.pstatic.net' },
+      { protocol: 'https', hostname: '**.googleusercontent.com' },
     ],
   },
 }

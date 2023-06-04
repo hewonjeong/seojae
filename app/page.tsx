@@ -1,8 +1,10 @@
 import { Montserrat } from 'next/font/google'
 import { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import Avatar from './Avatar'
 import Book from './Book'
 import books from './books'
+import getSession from './getSession'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -14,16 +16,27 @@ export const metadata = {
   description: 'Hewon Jeong’s Reading List',
 }
 
-export default function Home() {
+export default async function Home() {
+  const session = await getSession()
+
   return (
     <div className="mx-auto max-w-4xl pt-8 pb-16 px-5">
-      <header>
+      <header className="flex justify-between">
         <Link
           href="/"
           className={`${montserrat.variable} font-montserrat text-2xl font-black`}
         >
           Seójae
         </Link>
+        {session ? (
+          <Link href="/logout">
+            <Avatar src={session.user.user_metadata?.avatar_url} />
+          </Link>
+        ) : (
+          <Link href="/login" aria-label="Go to login">
+            <Avatar />
+          </Link>
+        )}
       </header>
       <main className="mt-12">
         <article>
