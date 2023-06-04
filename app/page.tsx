@@ -15,6 +15,7 @@ export const metadata = {
   title: 'Seójae | Hewon Jeong’s Reading List',
   description: 'Hewon Jeong’s Reading List',
 }
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
   const session = await getSession()

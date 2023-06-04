@@ -4,6 +4,8 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import Form from './Form'
 
+export const dynamic = 'force-dynamic'
+
 async function validateSession() {
   const supabase = createServerComponentClient<Database>({ cookies })
 
