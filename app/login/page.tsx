@@ -1,5 +1,6 @@
 import getSession from '@/app/getSession'
 import { redirect } from 'next/navigation'
+import Form from './Form'
 
 export default async function Login() {
   const session = await getSession()
@@ -8,5 +9,5 @@ export default async function Login() {
     redirect('/')
   }
 
-  return <div>Welcome</div>
+  return <Form />
 }

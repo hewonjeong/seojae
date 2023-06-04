@@ -20,7 +20,7 @@ export default async function Home() {
   const session = await getSession()
 
   return (
-    <div className="mx-auto max-w-4xl pt-8 pb-16 px-5">
+    <>
       <header className="flex justify-between">
         <Link
           href="/"
@@ -68,7 +68,7 @@ export default async function Home() {
           </div>
         </article>
       </main>
-    </div>
+    </>
   )
 }
 
