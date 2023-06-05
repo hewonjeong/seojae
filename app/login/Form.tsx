@@ -10,7 +10,6 @@ const montserrat = Montserrat({
 })
 
 export default function Login() {
-  const router = useRouter()
   const supabase = createClientComponentClient()
 
   async function handleClick() {
@@ -18,7 +17,6 @@ export default function Login() {
       provider: 'google',
       options: { redirectTo: `${location.origin}/auth/callback` },
     })
-    router.refresh()
   }
 
   return (
