@@ -1,8 +1,7 @@
 'use client'
 
-import { Montserrat } from 'next/font/google'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-import { Session } from '@supabase/supabase-js'
+import { Montserrat } from 'next/font/google'
 import { useRouter } from 'next/navigation'
 
 const montserrat = Montserrat({

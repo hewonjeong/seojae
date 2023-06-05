@@ -1,4 +1,7 @@
+import { createServerActionClient } from '@supabase/auth-helpers-nextjs'
+import { revalidatePath } from 'next/cache'
 import { Montserrat } from 'next/font/google'
+import { cookies } from 'next/headers'
 import { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import Avatar from './Avatar'
@@ -20,6 +23,14 @@ export const dynamic = 'force-dynamic'
 export default async function Home() {
   const session = await getSession()
 
+  const handleSignOut = async () => {
+    'use server'
+    console.log('handle signout')
+    const supabase = createServerActionClient({ cookies })
+    const result = await supabase.auth.signOut()
+    console.log('result', result)
+  }
+
   return (
     <>
       <header className="flex justify-between">
@@ -30,9 +41,11 @@ export default async function Home() {
           Seójae
         </Link>
         {session ? (
-          <Link href="/logout">
-            <Avatar src={session.user.user_metadata?.avatar_url} />
-          </Link>
+          <form action={handleSignOut}>
+            <button>
+              <Avatar src={session.user.user_metadata?.avatar_url} />
+            </button>
+          </form>
         ) : (
           <Link href="/login" aria-label="Go to login">
             <Avatar />
