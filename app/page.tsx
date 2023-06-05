@@ -41,7 +41,7 @@ export default async function Home() {
           Seójae
         </Link>
         {session ? (
-          <form action={handleSignOut}>
+          <form className="flex" action={handleSignOut}>
             <button>
               <Avatar src={session.user.user_metadata?.avatar_url} />
             </button>
