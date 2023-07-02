@@ -1,3 +1,5 @@
+import image4827613 from './4827613.jpeg'
+import image117585439 from './117585439.jpeg'
 import image67350256 from './67350256.jpeg'
 import image86545658 from './86545658.jpeg'
 import image110157236 from './110157236.jpeg'
@@ -8,10 +10,23 @@ import image204300 from './204300.jpeg'
 import image102951831 from './102951831.jpeg'
 import image72127469 from './72127469.jpeg'
 import image101375755 from './101375755.jpeg'
+import image38286918 from './38286918.jpeg'
 import image12501565 from './12501565.jpeg'
 import image89649360 from './89649360.jpeg'
 
 const books = [
+  {
+    title: '이방인',
+    authors: ['알베르 까뮈'],
+    url: 'http://www.yes24.com/Product/Goods/4827613',
+    image: image4827613,
+  },
+  {
+    title: '더 좋은 삶을 위한 철학',
+    authors: ['마이클 슈어'],
+    url: 'http://www.yes24.com/Product/Goods/117585439',
+    image: image117585439,
+  },
   {
     title: '함께 자라기',
     authors: ['김창준'],
@@ -71,6 +86,12 @@ const books = [
     authors: ['앤디 위어'],
     url: 'http://www.yes24.com/Product/Goods/101375755',
     image: image101375755,
+  },
+  {
+    title: '딥 워크',
+    authors: ['칼 뉴포트'],
+    url: 'https://www.yes24.com/Product/Goods/38286918',
+    image: image38286918,
   },
   {
     title: '실용주의 프로그래머',
