@@ -1,3 +1,5 @@
+import image3239082 from './3239082.jpeg'
+import image59580017 from './59580017.jpeg'
 import image4827613 from './4827613.jpeg'
 import image117585439 from './117585439.jpeg'
 import image67350256 from './67350256.jpeg'
@@ -11,10 +13,23 @@ import image102951831 from './102951831.jpeg'
 import image72127469 from './72127469.jpeg'
 import image101375755 from './101375755.jpeg'
 import image38286918 from './38286918.jpeg'
+import image15341766 from './15341766.jpeg'
 import image12501565 from './12501565.jpeg'
 import image89649360 from './89649360.jpeg'
 
 const books = [
+  {
+    title: '달리기를 말할 때 내가 하고 싶은 이야기',
+    authors: ['무라카미 하루키'],
+    url: 'http://www.yes24.com/Product/Goods/3239082',
+    image: image3239082,
+  },
+  {
+    title: '생각에 관한 생각',
+    authors: ['대니얼 카너먼'],
+    url: 'http://www.yes24.com/Product/Goods/59580017',
+    image: image59580017,
+  },
   {
     title: '이방인',
     authors: ['알베르 까뮈'],
@@ -92,6 +107,12 @@ const books = [
     authors: ['칼 뉴포트'],
     url: 'https://www.yes24.com/Product/Goods/38286918',
     image: image38286918,
+  },
+  {
+    title: '어떻게 공부할 것인가',
+    authors: ['헨리 뢰디거'],
+    url: 'http://www.yes24.com/Product/Goods/15341766',
+    image: image15341766,
   },
   {
     title: '실용주의 프로그래머',
